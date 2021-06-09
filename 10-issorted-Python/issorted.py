@@ -6,5 +6,23 @@
 # the list.
 
 def issorted(a):
-	# your code goes here
-	pass
+	if(len(a)==0 or len(a)==1):
+		return True
+	if(a[0]>a[1]):
+		result = False
+		for i in range(0,len(a)-1):
+			if(a[i]>=a[i+1]):
+				continue
+			else:
+				return result
+		return True
+	elif(a[0]<a[1]):
+		result = False
+		for i in range(0,len(a)-1):
+			if(a[i]<=a[i+1]):
+				continue
+			else:
+				return result
+		return True
+	return True
+print(issorted([1, 1]))
