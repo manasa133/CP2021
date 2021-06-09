@@ -12,5 +12,21 @@
 
 
 def fun_isfactorish(n):
-	return False
+	if(n<0):
+		n = -1 * n
+	numStr = str(n)
+	if(len(numStr)>=4):
+		return False
+	for i in numStr:
+		cnt = numStr.count(i)
+		if(cnt>=2):
+			return False
+	if "0" in numStr:
+		return False
+	for i in numStr:
+		if(n%int(i)==0):
+			continue
+		else:
+			return False
+	return True
 
