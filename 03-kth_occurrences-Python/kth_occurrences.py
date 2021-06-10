@@ -4,7 +4,23 @@
 
 
 
-def fun_kth_occurrences(s, n):
-	return 'a'
+def fun_kth_occurrences(s,n):
+	freq_dict = dict()
+	for i in s.lower():
+		if i not in freq_dict:
+			freq_dict[i] = 1
+		else:
+			freq_dict[i] += 1
 
+	freq_list = sorted(set(freq_dict.values()), reverse=True)
 
+	# if n > len(freq_list):
+	# 	return None
+
+	res = ""
+	for key, value in freq_dict.items():
+		if value == freq_list[n-1]:
+			res = key
+	return res
+
+print(fun_kth_occurrences("asuszenphonemaxm1 aemnsh", 6,))
