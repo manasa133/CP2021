@@ -6,4 +6,12 @@
 
 def sumofsquaresofdigit(n):
 	# Your code goes here
+	strnum = str(n)
+	sum = 0
+	for i in strnum:
+		num = int(i)
+		squr = num*num
+		sum = sum+squr
+	return sum
+
 	pass
