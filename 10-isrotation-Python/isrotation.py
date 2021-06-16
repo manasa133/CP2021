@@ -20,4 +20,4 @@ def isrotation(x, y):
 		if(newStr ==ystr):
 			return True
 	return False
-# print(isrotation(12345, 54321))
+
