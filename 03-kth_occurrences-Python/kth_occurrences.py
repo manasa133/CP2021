@@ -14,9 +14,6 @@ def fun_kth_occurrences(s,n):
 
 	freq_list = sorted(set(freq_dict.values()), reverse=True)
 
-	# if n > len(freq_list):
-	# 	return None
-
 	res = ""
 	for key, value in freq_dict.items():
 		if value == freq_list[n-1]:
