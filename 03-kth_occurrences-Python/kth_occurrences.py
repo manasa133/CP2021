@@ -5,18 +5,17 @@
 
 
 def fun_kth_occurrences(s,n):
-	freq_dict = dict()
+	freq = dict()
 	for i in s.lower():
-		if i not in freq_dict:
-			freq_dict[i] = 1
+		if i not in freq:
+			freq[i] = 1
 		else:
-			freq_dict[i] += 1
+			freq[i] += 1
 
-	freq_list = sorted(set(freq_dict.values()), reverse=True)
-
+	srtlist = sorted(set(freq.values()), reverse=True)
 	res = ""
-	for key, value in freq_dict.items():
-		if value == freq_list[n-1]:
+	for key, value in freq.items():
+		if value == srtlist[n-1]:
 			res = key
 	return res
 
